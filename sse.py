@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function
 from __future__ import unicode_literals
 
 import functools
@@ -18,12 +17,12 @@ class Sse(object):
         self._buffer = []
         self.set_retry(default_retry)
 
-    def set_retry(self, retrynum):
+    def set_retry(self, num):
         """
         Set distinct retry timeout instead the default
         value.
         """
-        self._retry = retrynum
+        self._retry = num
         self._buffer.append("retry: {0}\n\n".format(self._retry))
 
     def set_event_id(self, event_id):
@@ -74,8 +73,8 @@ class Sse(object):
 
     def __getattr__(self, attr):
         """
-        Make a dinamic method for add messages to specific events
-        like event_<eventname>(text="Hello")
+        Make a dynamic method for add messages to specific events
+        like add_event_<eventname>(text="Hello")
 
         Examples:
             response.add_foo(text="bar")
