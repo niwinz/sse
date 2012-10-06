@@ -1,20 +1,14 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
-from setuptools import setup
-
-description = """
-"""
+from distutils.core import setup
 
 setup(
     name = "sse",
     url = "https://github.com/niwibe/sse",
     author = "Andrei Antoukh",
     author_email = "niwi@niwi.be",
-    version="1.0",
-    description = "Server Sent Events protocol implemetation.",
-    install_requires=['distribute'],
-    zip_safe=False,
+    version="1.1",
+    description = "Server-Sent Events protocol implemetation.",
     py_modules = ['sse'],
     classifiers = [
         "Development Status :: 5 - Production/Stable",
