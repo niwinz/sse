@@ -38,7 +38,7 @@ class Sse(object):
         """
         self.set_event_id(None)
 
-    def _parse_text(self, text):
+    def _parse_text(self, text, encoding):
         # parse text if is list, tuple or set instance
         if isinstance(text, (list, tuple, set)):
             for item in text:
@@ -66,7 +66,7 @@ class Sse(object):
 
         self._buffer.append("event: {0}\n".format(event))
 
-        for text_item in self._parse_text(text):
+        for text_item in self._parse_text(text, encoding):
             self._buffer.append("data: {0}\n".format(text_item))
 
         self._buffer.append("\n")

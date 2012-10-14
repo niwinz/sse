@@ -7,7 +7,7 @@ setup(
     url = "https://github.com/niwibe/sse",
     author = "Andrei Antoukh",
     author_email = "niwi@niwi.be",
-    version="1.1",
+    version="1.2",
     description = "Server-Sent Events protocol implemetation.",
     py_modules = ['sse'],
     classifiers = [
